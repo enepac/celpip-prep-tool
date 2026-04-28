@@ -3,12 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "description": "AI-powered CELPIP Speaking practice tool with rubric-grounded feedback. Solo SaaS in development.",
-  "keywords": ["celpip", "speaking", "english-test", "express-entry", "canadian-immigration", "ai-feedback", "esl"],
+  "keywords": [
+    "celpip",
+    "speaking",
+    "english-test",
+    "express-entry",
+    "canadian-immigration",
+    "ai-feedback",
+    "esl"
+  ],
   "author": "Coco",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PLACEHOLDER/celpip-prep-tool"
+    "url": "https://github.com/enepac/celpip-prep-tool"
   },
   "engines": {
     "node": ">=22.0.0"
