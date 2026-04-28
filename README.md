@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CELPIP Speaking Prep
 
-## Getting Started
+AI-powered CELPIP Speaking practice tool. Solo SaaS in active development. Targeting ESL candidates preparing for Canadian Express Entry, PR, and citizenship tests.
 
-First, run the development server:
+**Status:** Pre-launch development. Not yet open for users.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What this is
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A web-based practice tool for the 8 task types of the CELPIP Speaking test, with AI-generated feedback grounded in Paragon's official CELPIP rubrics across the four scoring criteria: Content/Coherence, Vocabulary, Listenability, and Task Fulfillment.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Disclaimer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+AI-generated feedback in this tool is for self-study only. It is **not equivalent to an official CELPIP score** from Paragon Testing Enterprises. For official scoring, take the CELPIP test through Paragon.
 
-## Learn More
+## Tech stack
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 15 (App Router) + TypeScript + Tailwind v4
+- Whisper for audio transcription
+- Claude Sonnet for AI scoring
+- Vercel for hosting (planned)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build philosophy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Lean MVP, solo developer, 90-day ship target. Built in public. See `docs/build-log/` for the per-step engineering log.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — see LICENSE.
