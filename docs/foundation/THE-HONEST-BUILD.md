@@ -31,12 +31,19 @@ Constituent disciplines:
 
 Collect information that can change a decision. Noise is everything else.
 
-Constituent disciplines:
+The Signal subsystem produces continuous candidate signal from day 1 via four channels operating in combination. No single channel is sufficient; the combination is the discipline. Total Signal time budget at peak: approximately 5 hours per week.
 
-- **3 interviews/week from day 1:** Talk to potential or actual users at least three times per week starting from the first day of beta. Not surveys — conversations. Recorded or carefully noted.
-- **Direct observation:** Watch users use the product. Not asked what they think — watched what they do. Confusion is signal. Delight is signal. Abandonment is signal.
-- **Weekly falsifiable reviews:** Every week, write down what you expected to happen and what actually happened. If your hypotheses were not falsifiable in advance, they were not hypotheses.
-- **Telemetry:** Instrument the core loop (task start, recording completion, score received, score page time-on-page) from day one of beta. No telemetry = no signal.
+**Channel 1 — Reddit/Facebook lurking.** 90 minutes per week (30 min × 3 sessions), starting day 1. Sources: r/CELPIP, r/canadaexpressentry, r/ImmigrationCanada, plus 2-3 country-specific PR Facebook groups (locked at Step 2). Read only — no posting yet. Notes logged to `docs/signal/lurking-notes.md`, dated weekly, categorized (frustration / tool gap / pricing signal / outcome anxiety / other). Cull check: 4 weeks without a product decision changed → restructure or kill.
+
+**Channel 2 — Session recordings.** PostHog free tier (or equivalent: Microsoft Clarity, FullStory). Instrumented in Step 2 alongside the walking skeleton. Every recording watched within 48 hours, until 30 sessions observed; after that, watch flagged sessions only (abandoned, replayed audio, anomalous score). Notes logged to `docs/signal/session-notes.md` per recording. Cull check: stopping note-taking kills the channel even if recording continues.
+
+**Channel 3 — In-product feedback prompts.** Shipped with Step 4 (first reality contact). One rotating open-ended question per completed session, freeform text, max 200 chars, optional and skippable. Three questions cycled randomly to prevent fatigue. Responses stored in DB, exported weekly to `docs/signal/in-product-feedback-YYYY-WW.md`. Cull check: response rate below 15% after a month → restructure prompt or relocate it.
+
+**Channel 4 — Async written interviews.** 3 per week from day 14 (ramping from 1/week if recruitment lags). 5-7 Mom Test–framed questions sent via email or Reddit DM, requiring 2-3 sentence answers minimum. Incentive: $20 e-gift card or 3 months free Premium per completed response. Archived to `docs/signal/interviews/YYYY-MM-DD-respondent-id.md`. Cull check: response rate below 20% across 15 invitations → framing or audience is wrong, restructure.
+
+Live synchronous interviews are explicitly excluded from this stack; the four async/observational channels carry the Signal load.
+
+Each weekly review must report: what was observed across all four channels, what changed because of it, and what remains logged but unacted on. Two consecutive weeks where "what changed because of it" is empty means the Signal subsystem is broken regardless of how many notes were taken.
 
 ### Cull
 

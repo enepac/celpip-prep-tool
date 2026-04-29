@@ -14,7 +14,7 @@ This project runs under "The Honest Build" operating posture: ship real things t
 
 The operating loop is **Ship-Signal-Cull (S3)**:
 - **Ship:** Walking skeleton first, vertical slicing, tracer bullets using real infrastructure, WIP ≤ 2 at all times.
-- **Signal:** 3 user interviews/week from beta day 1, direct observation, weekly falsifiable reviews, telemetry on the core loop.
+- **Signal:** four channels (Reddit/Facebook lurking from day 1, session recordings via PostHog from Step 2, in-product feedback prompts from Step 4, async written interviews 3/week from day 14). ~5 hours/week peak budget. Live interviews excluded. Per-channel cull checks defined in `docs/foundation/THE-HONEST-BUILD.md`.
 - **Cull:** Rule of three before building, kill criteria written at build time, weekly subtraction, sunk-cost resistance.
 
 Quality non-negotiables (not subject to culling): rubric fidelity, disclaimer accuracy on every score display, data integrity, auth/payment correctness when added, audio reliability with clear retry on failure.
