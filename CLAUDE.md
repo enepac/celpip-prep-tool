@@ -8,6 +8,21 @@ An AI-powered CELPIP Speaking practice tool. Solo SaaS. Target audience: ESL can
 
 Competitive moat: rubric-accurate AI feedback grounded in Paragon's official CELPIP Speaking rubrics across the four criteria (Content/Coherence, Vocabulary, Listenability, Task Fulfillment) and the eight task types. Generic English feedback is competitor noise; rubric-grounded feedback is the product.
 
+## Operating Foundation — The Honest Build (S3)
+
+This project runs under "The Honest Build" operating posture: ship real things to real people, learn from signal, and cut what does not earn its keep.
+
+The operating loop is **Ship-Signal-Cull (S3)**:
+- **Ship:** Walking skeleton first, vertical slicing, tracer bullets using real infrastructure, WIP ≤ 2 at all times.
+- **Signal:** 3 user interviews/week from beta day 1, direct observation, weekly falsifiable reviews, telemetry on the core loop.
+- **Cull:** Rule of three before building, kill criteria written at build time, weekly subtraction, sunk-cost resistance.
+
+Quality non-negotiables (not subject to culling): rubric fidelity, disclaimer accuracy on every score display, data integrity, auth/payment correctness when added, audio reliability with clear retry on failure.
+
+Falsifiability rule: any discipline not changing a decision in 14–30 days is reviewed for removal. Weekly reviews are the enforcement mechanism.
+
+Full statement at `docs/foundation/THE-HONEST-BUILD.md`. Edit the canonical file; this section is a summary pointer.
+
 ## Locked decisions — do not propose changes
 
 - **Scope:** CELPIP Speaking only in v1. No Writing, Reading, or Listening.
