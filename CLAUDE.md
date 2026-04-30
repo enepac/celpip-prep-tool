@@ -21,6 +21,8 @@ Quality non-negotiables (not subject to culling): rubric fidelity, disclaimer ac
 
 Falsifiability rule: any discipline not changing a decision in 14–30 days is reviewed for removal. Weekly reviews are the enforcement mechanism.
 
+**Founder-Operator Lens (layered on The Honest Build):** Three behaviors layered on the foundation — revenue framing in every weekly review ("what did this week move toward paying users?"), "which sale does this unblock?" on every feature/scope decision, and founder-market-fit drift check at day-30/60/90 reviews. Four conflict resolutions locked: walking skeleton precedes pre-sales (AI products need demo), free testers for first 14-day Signal phase then paid from day 15, offer iteration runs parallel to product iteration not before, and warm-network recruitment precedes cold outreach in Signal Channel 4. Lens is itself falsifiable: any of the three behaviors not changing decisions in 30 days gets culled. Full statement at `docs/foundation/THE-HONEST-BUILD.md`.
+
 Full statement at `docs/foundation/THE-HONEST-BUILD.md`. Edit the canonical file; this section is a summary pointer.
 
 ## Locked decisions — do not propose changes

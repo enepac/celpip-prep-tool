@@ -90,6 +90,44 @@ Review cadence: weekly reviews (see `docs/reviews/`) are the mechanism for apply
 
 ---
 
+## Founder-Operator Lens (Layered on The Honest Build)
+
+The Honest Build is the primary operating foundation and governs how work happens. The Founder-Operator Lens is a layer on top that ensures every cycle of work stays anchored to revenue and to the audience the operator genuinely understands. The lens does not replace any Honest Build discipline; it adds three checks that fire at specific trigger points.
+
+### The Three Lens Behaviors
+
+**1. Revenue framing in weekly reviews.** Every weekly review file (`docs/reviews/YYYY-MM-DD-weekly-review.md`) opens with a section titled "What did this week move toward paying users?" requiring a concrete answer. Two consecutive weeks of "nothing yet" answers means the operator is drifting from the revenue anchor and the lens forces a course-correction discussion.
+
+**2. "Which sale does this unblock?" on every feature decision.** When considering shipping a feature, expanding scope, or polishing existing work, the lens forces a specific question: which paying customer (current or near-term) is unblocked or retained because of this work? If the answer is "none specifically, it's just better to have," the feature gets killed or deferred regardless of how appealing it is. This is sharper than the Honest Build's Rule of Three: requests must be tied to willingness to pay, not just expressed interest.
+
+**3. Periodic founder-market-fit check.** At day-30, day-60, and day-90 phase reviews, the operator answers: am I still building for an audience I genuinely understand? Drift signs: designing for users the operator has never been, optimizing for personas the operator has imagined, talking to advisors more than candidates. Naming drift early is the protection.
+
+### The Four Conflict Resolutions
+
+These name in advance how the lens and the foundation resolve where pure Sales-First Operator framing would conflict with the rest of the plan. They are locked decisions and not re-debated except by explicit operator request.
+
+**Resolution 1: Walking skeleton first, not pre-sales.** AI scoring products require a working demo to convey value; candidates will not pay $19/month based on pitch alone. Steps 2-4 of the build protocol (walking skeleton, real Claude scoring, ship to first testers) precede any conversion attempt. Pre-sales-only does not fit this product.
+
+**Resolution 2: Free testers for first 14-day Signal phase, paid from day 15.** Pure Founder Role would require charging from day one; the Honest Build originally targeted day-45 conversion. The compromise: the first cohort of testers (Step 4 onward) gets free access for 14 days while the Signal subsystem captures structural feedback. From day 15, charging starts. New testers from day 15 onward pay from their first session. This is shorter than the original day-45 target — the lens pulled paid conversion forward.
+
+**Resolution 3: Offer iteration runs parallel to product iteration.** Pure Founder Role iterates the offer before the product. For an AI product, the offer cannot be credibly tested without a working demo. So both run in parallel from day 1: pricing tests, positioning copy, and target-audience experiments happen on landing pages, Reddit posts, and ad copy while Steps 2-9 build the product. By day 21 the operator has both a working Task 1 and tested offer copy.
+
+**Resolution 4: Warm network before cold outreach in Signal Channel 4.** The Signal subsystem's Channel 4 (async written interviews, starting day 14) recruits warm contacts first, before going cold on Reddit/Facebook. Warm contacts include people the operator took CELPIP with, fellow Canadian PR applicants known personally, international students from the Red Deer Polytechnic diploma cohort, and any existing Canadian network member who has prepared for or taken CELPIP. Warm leads convert better, give more honest feedback, and signal whether founder-market fit is delivering distribution leverage. Cold recruitment from r/CELPIP and country-specific Facebook groups follows once the warm network is exhausted or starts producing diminishing returns.
+
+### Trigger Points
+
+The lens stays quiet outside three specific moments: end of every weekly review (revenue framing question), every feature or scope decision (which-sale-unblocks question), and day-30/60/90 phase reviews (founder-market-fit check). Outside these triggers, The Honest Build runs the show.
+
+### Falsifiability
+
+The lens is itself falsifiable under the Honest Build's rule. If after 30 days the three lens behaviors have not changed any decision, the lens is not earning its keep and gets culled.
+
+### What the Lens Does Not Do
+
+The lens does not license cutting corners on quality non-negotiables, generate constant revenue anxiety during legitimate building phases, replace any Honest Build discipline, override the dual-surface protocol, or add new disciplines beyond what is already locked in The Honest Build.
+
+---
+
 ## Cross-References
 
 - Project instructions: `CLAUDE.md` (summary pointer in the "Operating Foundation" section)
