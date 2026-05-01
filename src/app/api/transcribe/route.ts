@@ -5,8 +5,14 @@ import OpenAI from "openai";
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function POST(request: NextRequest) {
+  let formData: FormData;
   try {
-    const formData = await request.formData();
+    formData = await request.formData();
+  } catch {
+    return NextResponse.json({ error: "Request must be multipart/form-data with an audio field" }, { status: 400 });
+  }
+
+  try {
     const audioBlob = formData.get("audio");
 
     if (!audioBlob || !(audioBlob instanceof Blob)) {
