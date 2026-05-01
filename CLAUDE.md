@@ -15,13 +15,13 @@ This project runs under "The Honest Build" operating posture: ship real things t
 The operating loop is **Ship-Signal-Cull (S3)**:
 - **Ship:** Walking skeleton first, vertical slicing, tracer bullets using real infrastructure, WIP ≤ 2 at all times.
 - **Signal:** four channels (Reddit/Facebook lurking from day 1, session recordings via PostHog from Step 2, in-product feedback prompts from Step 4, async written interviews 3/week from day 14). ~5 hours/week peak budget. Live interviews excluded. Per-channel cull checks defined in `docs/foundation/THE-HONEST-BUILD.md`.
-- **Cull:** Rule of three before building, kill criteria written at build time, weekly subtraction, sunk-cost resistance.
+- **Cull:** Rule of three before building, kill criteria written at build time, per-cycle subtraction, sunk-cost resistance.
 
 Quality non-negotiables (not subject to culling): rubric fidelity, disclaimer accuracy on every score display, data integrity, auth/payment correctness when added, audio reliability with clear retry on failure.
 
-Falsifiability rule: any discipline not changing a decision in 14–30 days is reviewed for removal. Weekly reviews are the enforcement mechanism.
+Falsifiability rule: any discipline not changing a decision in 30 active project days is reviewed for removal. Cycle reviews are the enforcement mechanism.
 
-**Founder-Operator Lens (layered on The Honest Build):** Three behaviors layered on the foundation — revenue framing in every weekly review ("what did this week move toward paying users?"), "which sale does this unblock?" on every feature/scope decision, and founder-market-fit drift check at day-30/60/90 reviews. Four conflict resolutions locked: walking skeleton precedes pre-sales (AI products need demo), free testers for first 14-day Signal phase then paid from day 15, offer iteration runs parallel to product iteration not before, and warm-network recruitment precedes cold outreach in Signal Channel 4. Lens is itself falsifiable: any of the three behaviors not changing decisions in 30 days gets culled. Full statement at `docs/foundation/THE-HONEST-BUILD.md`.
+**Founder-Operator Lens (layered on The Honest Build):** Three behaviors layered on the foundation — revenue framing in every weekly review ("what did this week move toward paying users?"), "which sale does this unblock?" on every feature/scope decision, and founder-market-fit drift check at day-30/60/90 reviews. Four conflict resolutions locked: walking skeleton precedes pre-sales (AI products need demo), free testers for first 14 active tester-usage days post-Step-4, paid thereafter, offer iteration runs parallel to product iteration not before, and warm-network recruitment precedes cold outreach in Signal Channel 4. Lens is itself falsifiable: any of the three behaviors not changing decisions in 30 days gets culled. Full statement at `docs/foundation/THE-HONEST-BUILD.md`.
 
 Full statement at `docs/foundation/THE-HONEST-BUILD.md`. Edit the canonical file; this section is a summary pointer.
 
@@ -414,12 +414,15 @@ Each build plan defines its own concrete implementation of the universal lifecyc
 
 Plan-level implementations live as their own document in docs/plans/ and are referenced from CLAUDE.md. The universal lifecycle stays constant; the plan-level implementation evolves with the project.
 
-## Current plan: 90-day MVP build
+## Current plan: MVP build
 
 Phase boundaries:
-- Phase 1 (Day 1-30): Master rubric, ship MVP. Eleven steps total (Setup-1, Setup-2, then nine numbered steps from Next.js skeleton through Vercel deploy).
-- Phase 2 (Day 31-60): Beta iteration. Recruit 10 testers, iterate on feedback, public launch at $19/mo or $59/3mo.
-- Phase 3 (Day 61-90): Validate or pivot. Identify what works, decide v2 direction.
+- Phase 1 (Foundation, Steps 1–1.6): operating foundation and infrastructure. Status: complete.
+- Phase 2 (Walking Skeleton, Step 2): vertical slice of Task 1 with hardcoded scoring.
+- Phase 3 (Real Scoring + First Reality Contact, Steps 3–4): real Claude scoring with golden-file tests, ship to first 3 testers.
+- Phase 4 (Vertical Slices Tasks 2–8 + Public Launch, Steps 5–9): each remaining task as a vertical slice; Clerk and Stripe at Step 8; public launch at Step 9.
+
+Progress is measured by step completion and active project days, not calendar days. Soft trigger: if active-day count exceeds 60 without reaching Step 9, write a meta-review on viability, scope, and pace.
 
 Phase transitions require:
 - Phase closeout build log entry summarizing what was learned
@@ -428,11 +431,10 @@ Phase transitions require:
 
 ### Time and budget tracking
 
-Day-X tracking is claude.ai's responsibility. At each step closeout, claude.ai reports the current day count against the phase budget (e.g., "Step 3 closed on Day 7 of 30 — on pace"). Tracking inputs:
+Active-day tracking is claude.ai's responsibility. At each step closeout, claude.ai reports the current active-day count and which phase the project is in (e.g., "Step 3 closed — Phase 2, active day 7"). Tracking inputs:
 
-- Start date of the project (recorded in CLAUDE.md)
-- Today's date (resolved at the start of any session that needs it)
-- Phase boundaries from the current plan
+- Active project days (incremented in STATUS.md at the start of each session)
+- Current phase and step from the current plan
 
 Triggers for re-scoping or escalation:
 - A single step exceeds 2x its allocated budget
@@ -451,7 +453,7 @@ Step scope: a numbered step in the build plan. Contains multiple actions. Exampl
 
 Phase scope: a multi-step block ending at a milestone. Examples: Phase 1 ends at Step 9 deploy, Phase 2 ends at first 10 paying users. Closeout = phase summary build log written, CLAUDE.md updated for phase 2 scope, decision to advance.
 
-Future iterations beyond Day 90 (v2 features, post-launch fixes, scaling work) define their own scopes within the same universal lifecycle. The protocol does not change; the implementation does.
+Future iterations beyond Step 9 (v2 features, post-launch fixes, scaling work) define their own scopes within the same universal lifecycle. The protocol does not change; the implementation does.
 
 ## Tool usage policy
 

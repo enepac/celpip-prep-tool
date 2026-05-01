@@ -1,5 +1,8 @@
 # STATUS.md
 
+**Active project days:** 0
+*(An active day = any day with at least 1 hour of work logged on the project. Increment when starting a session if today is not yet counted. Last incremented: )*
+
 Single source of truth for current work state. Updated daily. WIP is capped at 2 — if a third item appears here, something must ship, pause, or be killed first.
 
 ---

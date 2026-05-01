@@ -8,6 +8,12 @@ This is the canonical statement of the operating foundation for the CELPIP Speak
 
 **The Honest Build** is the operating posture for this project. It means: ship real things to real people, learn from signal, and cut what does not earn its keep. No padding the build, no hedging the feedback, no features in search of users.
 
+---
+
+## Measurement Model
+
+Progress is measured by step completion and active project days, not calendar days. An active project day is any day with at least 1 hour of work logged on the project (tracked in `STATUS.md`). Reviews are cycle-based — one review file per completed step or natural batch of small steps — using filename format `cycle-N-review.md`, not weekly. Falsifiability checks count active days, not calendar days. Soft signal threshold: if active-day count exceeds 60 without reaching Step 9, write a meta-review on viability, scope, and pace.
+
 ## Operating Loop: Ship-Signal-Cull (S3)
 
 The S3 loop runs in sequence, every week, from day one through launch and beyond.
@@ -33,11 +39,11 @@ Collect information that can change a decision. Noise is everything else.
 
 The Signal subsystem produces continuous candidate signal from day 1 via four channels operating in combination. No single channel is sufficient; the combination is the discipline. Total Signal time budget at peak: approximately 5 hours per week.
 
-**Channel 1 — Reddit/Facebook lurking.** 90 minutes per week (30 min × 3 sessions), starting day 1. Sources: r/CELPIP, r/canadaexpressentry, r/ImmigrationCanada, plus 2-3 country-specific PR Facebook groups (locked at Step 2). Read only — no posting yet. Notes logged to `docs/signal/lurking-notes.md`, dated weekly, categorized (frustration / tool gap / pricing signal / outcome anxiety / other). Cull check: 4 weeks without a product decision changed → restructure or kill.
+**Channel 1 — Reddit/Facebook lurking.** 90 minutes per week (30 min × 3 sessions), starting day 1. Sources: r/CELPIP, r/canadaexpressentry, r/ImmigrationCanada, plus 2-3 country-specific PR Facebook groups (locked at Step 2). Read only — no posting yet. Notes logged to `docs/signal/lurking-notes.md`, dated weekly, categorized (frustration / tool gap / pricing signal / outcome anxiety / other). Cull check: 12 lurking sessions without a product decision changed → restructure or kill.
 
 **Channel 2 — Session recordings.** PostHog free tier (or equivalent: Microsoft Clarity, FullStory). Instrumented in Step 2 alongside the walking skeleton. Every recording watched within 48 hours, until 30 sessions observed; after that, watch flagged sessions only (abandoned, replayed audio, anomalous score). Notes logged to `docs/signal/session-notes.md` per recording. Cull check: stopping note-taking kills the channel even if recording continues.
 
-**Channel 3 — In-product feedback prompts.** Shipped with Step 4 (first reality contact). One rotating open-ended question per completed session, freeform text, max 200 chars, optional and skippable. Three questions cycled randomly to prevent fatigue. Responses stored in DB, exported weekly to `docs/signal/in-product-feedback-YYYY-WW.md`. Cull check: response rate below 15% after a month → restructure prompt or relocate it.
+**Channel 3 — In-product feedback prompts.** Shipped with Step 4 (first reality contact). One rotating open-ended question per completed session, freeform text, max 200 chars, optional and skippable. Three questions cycled randomly to prevent fatigue. Responses stored in DB, exported weekly to `docs/signal/in-product-feedback-YYYY-WW.md`. Cull check: response rate below 15% after 100 sessions post-Step-4 → restructure prompt or relocate it.
 
 **Channel 4 — Async written interviews.** 3 per week from day 14 (ramping from 1/week if recruitment lags). 5-7 Mom Test–framed questions sent via email or Reddit DM, requiring 2-3 sentence answers minimum. Incentive: $20 e-gift card or 3 months free Premium per completed response. Archived to `docs/signal/interviews/YYYY-MM-DD-respondent-id.md`. Cull check: response rate below 20% across 15 invitations → framing or audience is wrong, restructure.
 
@@ -53,7 +59,7 @@ Constituent disciplines:
 
 - **Rule of three:** A pattern must appear in at least three independent signals before it warrants a build response. One complaint is noise. Three complaints from three different users is a pattern.
 - **Kill criteria at build time:** Every feature and every discipline gets a kill criterion written before it ships. "If X does not happen by date Y, this gets removed." Written in the feature ledger.
-- **Weekly subtraction:** Every week, identify one thing to remove, simplify, or defer. Complexity is debt. The default answer to a new idea is "not yet."
+- **Per-cycle subtraction:** Each completed step (or natural batch of small steps), identify one thing to remove, simplify, or defer. Complexity is debt. The default answer to a new idea is "not yet."
 - **Sunk-cost resistance:** Hours spent building something do not count as a reason to keep it. The only question is: does it earn its keep from here forward?
 
 ---
@@ -72,9 +78,9 @@ These are not culled. They are the floor beneath the S3 loop.
 
 ## Falsifiability Rule
 
-Any discipline in the S3 loop that has not changed a decision in 14–30 days gets reviewed for culling. If a practice is being followed but not influencing choices, it is ceremony, not discipline. Ceremony gets cut.
+Any discipline in the S3 loop that has not changed a decision in 30 active project days gets reviewed for culling. If a practice is being followed but not influencing choices, it is ceremony, not discipline. Ceremony gets cut.
 
-Review cadence: weekly reviews (see `docs/reviews/`) are the mechanism for applying this rule.
+Review cadence: cycle reviews (see `docs/reviews/`) are the mechanism for applying this rule.
 
 ---
 
@@ -108,7 +114,7 @@ These name in advance how the lens and the foundation resolve where pure Sales-F
 
 **Resolution 1: Walking skeleton first, not pre-sales.** AI scoring products require a working demo to convey value; candidates will not pay $19/month based on pitch alone. Steps 2-4 of the build protocol (walking skeleton, real Claude scoring, ship to first testers) precede any conversion attempt. Pre-sales-only does not fit this product.
 
-**Resolution 2: Free testers for first 14-day Signal phase, paid from day 15.** Pure Founder Role would require charging from day one; the Honest Build originally targeted day-45 conversion. The compromise: the first cohort of testers (Step 4 onward) gets free access for 14 days while the Signal subsystem captures structural feedback. From day 15, charging starts. New testers from day 15 onward pay from their first session. This is shorter than the original day-45 target — the lens pulled paid conversion forward.
+**Resolution 2: Free testers for first 14 active tester-usage days post-Step-4, paid thereafter.** Pure Founder Role would require charging from day one; the Honest Build originally targeted day-45 conversion. The compromise: the first cohort of testers (Step 4 onward) gets free access for the first 14 active tester-usage days post-Step-4 while the Signal subsystem captures structural feedback. Thereafter, charging starts. New testers pay from their first session once the free-access window closes. This is shorter than the original day-45 target — the lens pulled paid conversion forward.
 
 **Resolution 3: Offer iteration runs parallel to product iteration.** Pure Founder Role iterates the offer before the product. For an AI product, the offer cannot be credibly tested without a working demo. So both run in parallel from day 1: pricing tests, positioning copy, and target-audience experiments happen on landing pages, Reddit posts, and ad copy while Steps 2-9 build the product. By day 21 the operator has both a working Task 1 and tested offer copy.
 
