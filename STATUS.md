@@ -1,7 +1,7 @@
 # STATUS.md
 
-**Active project days:** 0
-*(An active day = any day with at least 1 hour of work logged on the project. Increment when starting a session if today is not yet counted. Last incremented: )*
+**Active project days:** 1
+*(An active day = any day with at least 1 hour of work logged on the project. Increment when starting a session if today is not yet counted. Last incremented: 2026-05-01)*
 
 Single source of truth for current work state. Updated daily. WIP is capped at 2 — if a third item appears here, something must ship, pause, or be killed first.
 
@@ -11,7 +11,7 @@ Single source of truth for current work state. Updated daily. WIP is capped at 2
 
 | # | Item | Started | Notes |
 |---|------|---------|-------|
-| 1 | Step 2 of 9 — Walking skeleton of Task 1 | — | Next up after Step 1 completes |
+| 1 | Step 3 of 9 — Real Claude scoring on Task 1 + golden-file tests against Section 12 samples | — | Walking skeleton complete; operator gate test pending |
 
 ---
 
@@ -19,12 +19,11 @@ Single source of truth for current work state. Updated daily. WIP is capped at 2
 
 | Item | Target date | Notes |
 |------|-------------|-------|
-| Step 3 of 9 — Audio recording (MediaRecorder) | — | |
-| Step 4 of 9 — Upload route for audio blobs | — | |
-| Step 5 of 9 — Whisper transcription | — | |
-| Step 6 of 9 — Scorer system prompt | — | |
-| Step 7 of 9 — Scorer API route | — | |
-| Step 8 of 9 — Score display UI | — | |
+| Step 4 of 9 — Email-only auth + ship to first 3 testers | — | |
+| Step 5 of 9 — Vertical slice Task 2 | — | |
+| Step 6 of 9 — Vertical slice Tasks 3-8 | — | |
+| Step 7 of 9 — Clerk auth | — | |
+| Step 8 of 9 — Stripe payment | — | |
 | Step 9 of 9 — Deploy to Vercel | — | |
 
 ---
@@ -33,4 +32,4 @@ Single source of truth for current work state. Updated daily. WIP is capped at 2
 
 | Item | Kill date | Reason |
 |------|-----------|--------|
-| — | — | — |
+| Tracer-bullet scripts (scripts/tracer-bullets/) | 2026-05-01 | Throwaways — validated integrations, deleted after findings captured in phase-1-hypotheses.md |
